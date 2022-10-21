@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarRent.Pages.AddCustomer"
+             Title="AddCustomer">
+    <VerticalStackLayout>
+        <Entry x:Name="entryFirstname" Placeholder="First Name" VerticalOptions="Center"/>
+
+        <Entry x:Name="entryLastname" Placeholder="Last Name" VerticalOptions="Center"/>
+
+        <Entry x:Name="entryAddress" Placeholder="Address" VerticalOptions="Center"/>
+
+        <Entry x:Name="entryPhonenumber" Placeholder="Phone Number" VerticalOptions="Center"/>
+
+        <Button x:Name="btnsave" Text="Save Coustomer" Clicked="btnsave_Clicked" VerticalOptions="Center"/>
+        
+    </VerticalStackLayout>
+</ContentPage>

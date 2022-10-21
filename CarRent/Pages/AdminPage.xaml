@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarRent.Pages.AdminPage"
+             Title="Reg">
+    <VerticalStackLayout>
+        <Entry x:Name="entryemail" Placeholder="Email" VerticalOptions="Center"/>
+        
+        <Entry x:Name="entrypass" Placeholder="Password" VerticalOptions="Center"/>
+
+        <Button x:Name="btnsave" Text="Register A" Clicked="btnsave_Clicked" VerticalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>

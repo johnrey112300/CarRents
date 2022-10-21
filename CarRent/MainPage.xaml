@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
+             Shell.NavBarHasShadow="False"
+
+             x:Class="CarRent.MainPage"
+             BackgroundColor="#A2D5AB">
+    <VerticalStackLayout  Padding="30,0" VerticalOptions="Center">
+        <skia:SKLottieView Source="reg.json"
+                           RepeatCount="-1"
+                           WidthRequest="300"
+                           HeightRequest="300"/>
+        <VerticalStackLayout Spacing=" 5">
+            <Label Text=" Welcome Owner" FontSize="28" TextColor="Black" HorizontalTextAlignment="Center"/>
+            <Label Text=" Input Your Car Details!" FontSize="28" TextColor="Green" HorizontalTextAlignment="Center"/>
+        </VerticalStackLayout>
+        <!--<StackLayout Orientation="Horizontal">
+            <Frame ZIndex="1" HasShadow="True" BorderColor="Black" CornerRadius="28" HeightRequest="56" WidthRequest="56">
+                <Image Source="user.png"  HeightRequest="20" WidthRequest="20" VerticalOptions="Center" />
+            </Frame>
+
+            <Frame HeightRequest="45" Padding="0" HasShadow="True" BorderColor="Black" CornerRadius="15" HorizontalOptions="FillAndExpand"  Margin="-20,0,0,0">
+                <handlers:Border Margin="20,0,0,0"  VerticalOptions="Center" Placeholder="FirstName"/>
+            </Frame>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Frame ZIndex="1" HasShadow="True" BorderColor="Black" CornerRadius="28" HeightRequest="56" WidthRequest="56">
+                <Image Source="user.png"  HeightRequest="20" WidthRequest="20" VerticalOptions="Center" />
+            </Frame>
+
+            <Frame HeightRequest="45" Padding="0" HasShadow="True" BorderColor="Black" CornerRadius="15" HorizontalOptions="FillAndExpand"  Margin="-20,0,0,0">
+                <handlers:Border Margin="20,0,0,0"  VerticalOptions="Center" Placeholder="LastName"/>
+            </Frame>
+        </StackLayout>
+
+        -->
+        <!--USERNAME-->
+        <!--
+        <StackLayout Orientation="Horizontal">
+            <Frame ZIndex="1" HasShadow="True" BorderColor="Black" CornerRadius="28" HeightRequest="56" WidthRequest="56">
+                <Image Source="user.png"  HeightRequest="20" WidthRequest="20" VerticalOptions="Center" />
+            </Frame>
+
+            <Frame HeightRequest="45" Padding="0" HasShadow="True" BorderColor="Black" CornerRadius="15" HorizontalOptions="FillAndExpand"  Margin="-20,0,0,0">
+                <handlers:Border Margin="20,0,0,0" Keyboard="Email" VerticalOptions="Center" Placeholder="Email"/>
+            </Frame>
+        </StackLayout>
+
+        -->
+        <!--Lock and Password Section-->
+        <!--
+        <StackLayout Orientation="Horizontal">
+
+            <Frame ZIndex="1"  HasShadow="True" BorderColor="Black" CornerRadius="28" HeightRequest="56" WidthRequest="56">
+                <Image Source="locked.png"  HeightRequest="20" WidthRequest="20" VerticalOptions="Center" />
+            </Frame>
+
+            <Frame HeightRequest="45" Padding="5" HasShadow="True" BorderColor="Black" CornerRadius="15" HorizontalOptions="FillAndExpand"  Margin="-20,0,0,0">
+                <handlers:Border Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True" />
+            </Frame>
+        </StackLayout>
+
+
+        <Button Text="Log In" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#0792ef"/>
+
+        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Center">
+            <Label Text="Don't Have Account?" TextColor="Gray"/>
+            <Label Text="Sign Up Here!" TextColor="SkyBlue"/>
+        </StackLayout>-->
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto,Auto">
+
+            <Entry Grid.Row="0" Grid.Column="0" x:Name="txtCname"
+               Grid.ColumnSpan="2" PlaceholderColor="#4C6793" Placeholder="Car Name:" VerticalOptions="CenterAndExpand"/>
+
+            <Entry Grid.Row="1" Grid.Column="0" x:Name="txtPnum"
+               Grid.ColumnSpan="2"  PlaceholderColor="#4C6793" Placeholder="Plate Number:" VerticalOptions="CenterAndExpand"/>
+
+            <Entry Grid.Row="3" Grid.Column="0" x:Name="txtSitCap"
+               Grid.ColumnSpan="2" PlaceholderColor="#4C6793" Placeholder="Sit Capacity:" VerticalOptions="CenterAndExpand"/>
+
+            <Entry Grid.Row="4" Grid.Column="0" x:Name="txtCondition"
+               Grid.ColumnSpan="2" PlaceholderColor="#4C6793" Placeholder="Car Condition:" VerticalOptions="CenterAndExpand" />
+          
+            <Entry Grid.Row="5" Grid.Column="0" x:Name="txtStatus"
+               Grid.ColumnSpan="2" PlaceholderColor="#4C6793" Placeholder="Car Status:" VerticalOptions="CenterAndExpand" />
+
+
+
+
+            <Button Margin="0,20,0,0" Grid.Row="6" 
+                Grid.Column="1" 
+                Text="Register" 
+                HorizontalOptions="FillAndExpand" Clicked="btnregister_Clicked" 
+                x:Name="btnregister" />
+
+            <Button Margin="0,20,0,0" Grid.Row="6" 
+                Grid.Column="0" 
+                Text="Cancel" 
+                HorizontalOptions="FillAndExpand" 
+                    x:Name="btncancel"   
+            Clicked="btncancel_Clicked" />
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

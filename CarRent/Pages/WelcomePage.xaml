@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
+             x:Class="CarRent.Pages.WelcomePage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#C8B6E2"
+             >
+
+    <VerticalStackLayout>
+        <Image Source="logo.png"
+               WidthRequest="200"
+               HeightRequest="200"/>
+
+        <Label 
+            Text="Best Car You Can Rent!"
+             FontSize="Header"
+            TextColor="Blue"
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="CenterAndExpand" />
+        
+        <Grid Grid.Row ="2" ColumnDefinitions="*, *" Margin="5" ColumnSpacing="5">
+            
+            <Button Margin="0,20,0,0" Grid.Row="5" 
+                Grid.Column="6" 
+                Text="Register Car" 
+                HorizontalOptions="FillAndExpand"  
+                x:Name="btnregistercar" 
+                    Clicked="btnregistercar_Clicked"/>
+
+            <Button Margin="0,20,0,0" Grid.Row="5" 
+                Grid.Column="0" 
+                Text="View and Rent Car" 
+                HorizontalOptions="FillAndExpand" 
+                    x:Name="btnview"   
+                    Clicked="btnview_Clicked" />
+        </Grid>
+    </VerticalStackLayout>  
+</ContentPage>
