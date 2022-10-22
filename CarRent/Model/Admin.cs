@@ -14,24 +14,24 @@ namespace CarRent.Model
     public class Admin
     {
     
-        public string Email { get; set; }
+        public string Emails { get; set; }
         public string Password { get; set; }
 
 
-        public async Task<bool> AddAdmin( string mail, string pword)
+        public async Task<bool> AddAdmin( string mails, string pword)
         {
             try
             {
                 var evaluateEmail = (await car.Child("Admin")
                     .OnceAsync<Admin>())
-                    .FirstOrDefault(a => a.Object.Email == mail);
+                    .FirstOrDefault(a => a.Object.Emails == mails);
 
                 if (evaluateEmail == null)
                 {
                     var user = new Admin()
                     {
                      
-                        Email = mail,
+                        Emails = mails,
                         Password = pword
                     };
                     await car
@@ -52,14 +52,14 @@ namespace CarRent.Model
             }
         }
 
-        public async Task<bool> UserLogin(string email, string Pass)
+        public async Task<bool> UserLogin(string emails, string Pass)
         {
             try
             {
                 var evaluateEmail = (await car.Child("Admin")
                                   .OnceAsync<Admin>())
                                   .FirstOrDefault
-                                  (a => a.Object.Email == email &&
+                                  (a => a.Object.Emails == emails &&
                                    a.Object.Password == Pass);
                 return evaluateEmail != null;
             }

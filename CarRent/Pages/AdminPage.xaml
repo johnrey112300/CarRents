@@ -8,6 +8,6 @@
         
         <Entry x:Name="entrypass" Placeholder="Password" VerticalOptions="Center"/>
 
-        <Button x:Name="btnsave" Text="Register A" Clicked="btnsave_Clicked" VerticalOptions="Center"/>
+        <Button x:Name="btnsave" Text="Register Admin" Clicked="btnsave_Clicked" VerticalOptions="Center"/>
     </VerticalStackLayout>
 </ContentPage>
